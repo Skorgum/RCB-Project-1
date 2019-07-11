@@ -1,1 +1,3 @@
-# RCB-Project-1
+# PROJECT 1
+
+##Idea Brainstorm
