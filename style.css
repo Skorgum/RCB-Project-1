@@ -1,0 +1,40 @@
+#main-nav{
+    background: #0866cc;
+    text-align: center;
+    padding:.5% 0 1% 0;
+    position: relative;
+}
+
+#sign-up-in a{
+    text-align: right;
+    position: relative;
+    left: 29%;
+    color: white;
+    font-size: .8em;
+}
+
+#sign-up{
+    border-right: 1px #0c74e2 solid;
+    padding-right: .5%;
+}
+
+#brand{
+    color: white;
+    font-size: 3em;
+    display: inline-block;
+    position: relative;
+    top: 14px;
+    margin-right: 2%;
+}
+
+form{
+    display: inline-block;
+}
+
+div.col-5{
+    margin-right: 2%;
+}
+
+input#location, input#event{
+    width: 20rem;
+}
