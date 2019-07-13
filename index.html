@@ -10,28 +10,40 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- header -->
     <header class="container-fluid">
+        <!-- main navigation starts-->
         <div id="main-nav" class="row">
             <nav class="col-sm-12">
-                <div id="user">
-                    <a href="#" id="link-border">Sign Up</a> 
-                    <a href="#">Sign in</a>
+                <!-- sign in & sign up feature-->
+                <div id="sign-up-in" class="row">
+                    <div class="col-sm-12">
+                        <a href="#" id="sign-up">Sign Up</a> 
+                        <a href="#" id="sign-in">Sign in</a>
+                    </div>
                 </div>
-                <h1>eventful</h1>
-                <form action="">
-                    <div class="search">
-                        <label for="location">Location:</label>
-                        <input type="textarea" id="location" name="location" placeholder="New Brunswick NJ">
-                    </div>
-                    <div class="search">
-                        <label for="event">Find:</label>
-                        <input type="textarea" id="event" name="event" placeholder="Event Title or Keyword">
-                    </div>
-                    <input type="submit" value="search">
-                </form>
-            </nav>    
+                <!-- Brand -->
+                <h1 id="brand">eventful</h1>
+                <!-- search events form -->
+                <form>
+                    <div class="form-row">
+                        <div class="col-5">
+                            <!-- location parameter -->
+                            <input type="textarea" id="location" class="form-control" name="location" placeholder="Location">
+                        </div>  
+                        <div class="col-5">
+                            <!-- event title parameter-->
+                            <input type="textarea" id="event"    class="form-control" name="event"    placeholder="Event Title or Keyword">
+                        </div>
+                        <div class="col-1">
+                            <!-- submit button -->
+                            <input type="submit" class="btn btn-primary" value="search">  
+                        </div> 
+                    </div>     
+                </form>                   
+            </nav> 
+            <!-- end of main navigation -->   
         </div>
-        </div>
-    </div>
+    </header>
 </body>
 </html>
