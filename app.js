@@ -16,5 +16,9 @@ var firebaseConfig = {
 // global variables
 
 // onclick event for search
+$('#search').on('click',function(event){
+  event.preventDefault()
+  console.log("click");
+})
 
 // API
