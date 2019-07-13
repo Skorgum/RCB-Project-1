@@ -31,10 +31,15 @@ form{
     display: inline-block;
 }
 
-div.col-5{
+div.col-md-5{
     margin-right: 2%;
 }
 
 input#location, input#event{
     width: 20rem;
+}
+
+#demo-api{
+    border: 3px solid red;
+    height:  1000px;
 }
