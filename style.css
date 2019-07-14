@@ -40,6 +40,54 @@ input#location, input#event{
 }
 
 #demo-api{
-    border: 3px solid red;
-    height:  1000px;
+    text-align: left;
 }
+
+h2{
+    text-align: center;
+}
+
+#sides{
+    background: #e8e8e8;
+}
+
+.container{
+    width: auto;                                                                                                                                                                                                   
+}
+
+#events-list{
+    background: white;
+    padding: 0;
+    margin: 0 16%;
+
+}
+
+.col-md-6{
+    display: inline-block;
+    flex: 0%;
+    width: 0%;
+}
+
+.card{
+    border: none;
+}
+
+.card-body{
+    padding-top:0;
+}
+
+.event-row{
+    margin-bottom: 2%;
+    border-bottom: dotted 1px grey;
+}
+
+div.col-md-3, div.col-md-9{
+    padding:0;
+}
+
+#tickets{
+    background: #ed7133;
+    color: white;
+    font-size: .8rem;
+}
+

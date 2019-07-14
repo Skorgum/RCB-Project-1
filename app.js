@@ -16,12 +16,12 @@ var firebaseConfig = {
 // global variables
 
 // onclick event for search
-$('#search').on('click',search);
+$(document).on('click','#search',search);
 
 
 
- function search(event){
-  event.preventDefault();
+ function search(e){
+  e.preventDefault();
 
   var location = $('#location').val();
   var event = $('#event').val();
@@ -41,15 +41,35 @@ $('#search').on('click',search);
       console.log(eventArray);
        
           for (var i= 0; i < eventArray.length; i++) {  
-          var event = eventArray[i];
-          var name = event.name;
-          console.log(name);
-          var ticketURL = event.url;
-          console.log(ticketURL);
-          var title = $(`<a href="${ticketURL}">${name}</a>`)                                                                 
-          var eventDiv = $("<div class='name'>");
-          eventDiv.append(title);
-          $("#demo-api").append(eventDiv);
+            var event = eventArray[i];
+            var name = event.name;
+            var imgURL = event.images[0].url
+            var img = $(`<img src="${imgURL}" width="100" height="100">`)
+            console.log(name);
+            var ticketURL = event.url;
+            console.log(ticketURL);
+            var title = $(`<a href="${ticketURL}">${name}</a>`)                                                                 
+            var eventsDiv = $('<div class="events">');
+            var eventDiv = 
+            $(`<div class="row event-row">
+                  <div class="col-md-2">
+                    <img src="${imgURL}" width="100" height="100">
+                  </div>
+                  <div class="col-md-10">
+                    <div class"card">
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="${ticketURL}">${name}</a></h5>
+                        <p class ="card-text">Some quick example text to build on the card title and make</p>
+                        <a href="${ticketURL}" id="tickets" class="btn">Tickets</a>
+                      </div>
+                  </div>
+                </div> 
+              `)
+            // eventDiv.append(title);
+            $(eventsDiv).append(eventDiv);
+            $('#events').append(eventsDiv);
+
+            // $('#demo-api').append(img);
           }
           
   })
