@@ -1,0 +1,101 @@
+body{
+   background-image: url("../images/wallpaper.jpg");
+   
+}
+#brand:hover{
+    color:#ed7133;
+    text-decoration: none;
+}
+#main-nav{
+    background: #0866cc;
+    text-align: center;
+    padding: .5% 0 1% 0;
+    position: relative;
+}
+
+#sign-up-in a{
+    text-align: right;
+    position: relative;
+    left: 29%;
+    color: white;
+    font-size: .8em;
+}
+
+#sign-up{
+    border-right: 1px #0c74e2 solid;
+    padding-right: .5%;
+}
+
+#brand{
+    color: white;
+    font-size: 3em;
+    display: inline-block;
+    position: relative;
+    top: 14px;
+    margin-right: 2%;
+    }
+
+form{
+    display: inline-block;
+}
+
+div.col-md-5{
+    margin-right: 2%;
+}
+
+input#location, input#event{
+    width: 20rem;
+}
+
+#demo-api{
+    text-align: left;
+}
+
+h2{
+    text-align: center;
+}
+
+#sides{
+    background: #e8e8e8;
+}
+
+.container{
+    width: auto;                                                                                                                                                                                                   
+}
+
+#events-list{
+    background: white;
+    padding: 0;
+    margin: 0 16%;
+    
+}
+
+.col-md-6{
+    display: inline-block;
+    flex: 0%;
+    width: 0%;
+}
+
+.card{
+    border: none;
+}
+
+.card-body{
+    padding-top:0;
+}
+
+.event-row{
+    margin-bottom: 2%;
+    border-bottom: dotted 1px grey;
+}
+
+div.col-md-3, div.col-md-9{
+    padding:0;
+}
+
+#tickets{
+    background: #ed7133;
+    color: white;
+    font-size: .8rem;
+}
+
