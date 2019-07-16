@@ -10,41 +10,50 @@
     <title>Eventful</title>
 </head>
 <body>
-    <!-- Header begins -->
-    <header class="container-fluid">                                       
-        <section id="main-nav" class="row"> <!-- Main Navigation starts-->
+    <!-- header -->
+    <header class="container-fluid">
+        <!-- main navigation starts-->
+        <div id="main-nav" class="row">
             <nav class="col-sm-12">
                 <!-- sign in & sign up feature-->
-                <section id="sign-up-in" class="row">
+                <div id="sign-up-in" class="row">
                     <div class="col-sm-12">
                         <a href="#" id="sign-up">Sign Up</a> 
                         <a href="#" id="sign-in">Sign in</a>
                     </div>
-                </section>
+                </div>
                 <!-- Brand -->
-                <h1 id="brand">eventful</h1>    
+                <a id="brand" href="./index.html">eventful</a>
+                <!--<h1 id="brand">eventful</h1>-->
                 <!-- search events form -->
-                <form id="search-form">
-                    <section class="form-row">
-                        <div id="search-location"   class="col-md-5 col-sm-12">
-                            <input type="textarea"  id="location" class="form-control"    name="location" value="" placeholder="Location">
+                <form>
+                    <div class="form-row">
+                        <div class="col-md-5 col-sm-12">
+                            <!-- location parameter -->
+                            <input type="textarea" id="location" class="form-control" name="location" value="" placeholder="Location">
                         </div>  
-                        <div id="search-title"      class="col-md-5 col-sm-12">
-                            <input type="textarea"  id="event"    class="form-control"    name="event"    value=""   placeholder="Event Title or Keyword">
+                        <div class="col-md-5 col-sm-12">
+                            <!-- event title parameter-->
+                            <input type="textarea" id="event"    class="form-control" name="event"  value=""   placeholder="Event Title or Keyword">
                         </div>
-                        <div id="search-button"     class="col-md-1 col-sm-12">
-                            <input type="submit"    id="search"   class="btn btn-primary" name="search">  
+                        <div class="col-md-1 col-sm-12">
+                            <!-- submit button -->
+                            <input type="submit" id="search" class="btn btn-primary" value="search">  
                         </div> 
-                    </section>     
+                    </div>     
                 </form>                   
-        </section><!-- Main Navigation Ends-->
-    </header><!-- Header Ends-->
+            </nav> 
+            <!-- end of main navigation -->   
+        </div>
+    </header>
     
     <section class="container-fluid" id="sides">
-        <div class="container" id="events-list"></div>
-    </section>
-
-
+        <div class="container" id="events-list">
+            <div class="container" id="demo-api">
+                <div id="events"></div>
+            </div>
+        </div>
+    </section
     <!-- jQuery --->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
