@@ -28,15 +28,15 @@ $(document).on('click','#search',search);
   var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=" + event + "&apikey=jMH0oHQBw8sCR7SRnBKCRRoG6gn2I5S8";
 
   $.ajax({
-      url: "http://104.200.17.235:8081/cors/",
-      method: "POST",
+      url: 'https://cors-anywhere.herokuapp.com/' + queryURL,
+      headers: { 'X-Requested-With': 'XMLHttpRequest' },
+      method: "GET",
       contentType: "application/json",
-      data: JSON.stringify({
-      url: queryURL
-      })
-  }).then(function (response) {
 
-      var data = JSON.parse(response);
+  }).then(function (response) {
+      console.log(response)
+
+      var data = response;
       var eventArray = data._embedded.events;
       console.log(eventArray);
        
