@@ -5,6 +5,7 @@ body{
 #brand:hover{
     color:#ed7133;
     text-decoration: none;
+    cursor: grab;
 }
 #main-nav{
     background: #0866cc;
