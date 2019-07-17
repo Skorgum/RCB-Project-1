@@ -58,9 +58,9 @@ $(document).on('click','#search',search);
                   <div class="col-md-10">
                     <div class"card">
                       <div class="card-body">
-                        <h5 class="card-title"><a href="${ticketURL}">${name}</a></h5>
+                        <h5 class="card-title"><a href="${ticketURL}" target="_blank">${name}</a></h5>
                         <p class ="card-text">Some quick example text to build on the card title and make</p>
-                        <a href="${ticketURL}" id="tickets" class="btn">Tickets</a>
+                        <a href="${ticketURL}" id="tickets" class="btn" target="_blank">Tickets</a>
                       </div>
                   </div>
                 </div> 
