@@ -28,15 +28,15 @@ $(document).on('click','#search',search);
   var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=" + event + "&apikey=jMH0oHQBw8sCR7SRnBKCRRoG6gn2I5S8";
 
   $.ajax({
-      url: "http://104.200.17.235:8081/cors/",
-      method: "POST",
+      url: 'https://cors-anywhere.herokuapp.com/' + queryURL,
+      headers: { 'X-Requested-With': 'XMLHttpRequest' },
+      method: "GET",
       contentType: "application/json",
-      data: JSON.stringify({
-      url: queryURL
-      })
-  }).then(function (response) {
 
-      var data = JSON.parse(response);
+  }).then(function (response) {
+      console.log(response)
+
+      var data = response;
       var eventArray = data._embedded.events;
       console.log(eventArray);
        
@@ -58,9 +58,9 @@ $(document).on('click','#search',search);
                   <div class="col-md-10">
                     <div class"card">
                       <div class="card-body">
-                        <h5 class="card-title"><a href="${ticketURL}">${name}</a></h5>
+                        <h5 class="card-title"><a href="${ticketURL}" target="_blank">${name}</a></h5>
                         <p class ="card-text">Some quick example text to build on the card title and make</p>
-                        <a href="${ticketURL}" id="tickets" class="btn">Tickets</a>
+                        <a href="${ticketURL}" id="tickets" class="btn" target="_blank">Tickets</a>
                       </div>
                   </div>
                 </div> 
