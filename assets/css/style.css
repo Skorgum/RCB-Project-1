@@ -20,11 +20,13 @@ body{
     left: 29%;
     color: white;
     font-size: .8em;
+    padding-bottom: 10px;
 }
 
 #sign-up{
     border-right: 1px #0c74e2 solid;
     padding-right: .5%;
+    margin-bottom: 20px;
 }
 
 #brand{
