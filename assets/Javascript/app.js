@@ -12,6 +12,27 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  var dataRef = firebase.database();
+  var name = "";
+  var email = "";
+  $("#btn btn-primary").on("click", function(event) {
+    event.preventDefault();
+
+  
+    name = $("#ImputName").val().trim();
+    email = $("#ImputEmail").val().trim();
+    
+
+    // Code for the push
+    dataRef.ref().push({
+
+      name: name,
+      email: email,
+     
+    });
+  });
+
+
 
 // global variables
 
