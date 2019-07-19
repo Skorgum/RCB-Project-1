@@ -28,6 +28,22 @@ $(document).on('click','#search',search);
   $('.event-row').remove();
 
   var location = $('#location').val();
+  console.log(location);
+  var queryLoc = 'https://api.tomtom.com/2/poiSearch/' + location + '.json?key=GwNt01idB1nlO4XGwri8kPgAzRRPyAbE[&limit=<20>]';
+
+  $.ajax({
+    url:'https://cors-anywhere.herokuapp.com/' + queryLoc,
+    headers: { 'X-Requested-With': 'XMLHttpRequest' },
+    method: "GET",
+    contentType: "application/json",
+  }).then(function (response){
+
+    console.log(response)
+  })
+
+  
+          
+
   var event = $('#event').val();
   var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=" + event + "&apikey=jMH0oHQBw8sCR7SRnBKCRRoG6gn2I5S8";
 
@@ -50,6 +66,9 @@ $(document).on('click','#search',search);
           var imgURL = event.images[0].url
           var ticketURL = event.url;
           var city = event._embedded.venues[0].city.name;
+
+          
+
           function weather(){// weather data for each event location
             $.ajax({
               url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=imperial" +
@@ -59,7 +78,7 @@ $(document).on('click','#search',search);
                  console.log(response)
                 })
           };
-          weather();                                                               
+         weather();                                                               
           var eventsDiv = $('<div class="events">');
           var eventDiv = 
           $(`<div class="row event-row">
