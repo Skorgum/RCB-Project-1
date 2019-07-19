@@ -18,22 +18,18 @@ var firebaseConfig = {
   $("#btn btn-primary").on("click", function(event) {
     event.preventDefault();
 
-  
-    name = $("#ImputName").val().trim();
-    email = $("#ImputEmail").val().trim();
     
+    name = $("#inputName").val().trim();
+    email = $("#inputEmail").val().trim();
+  
 
     // Code for the push
     dataRef.ref().push({
 
       name: name,
       email: email,
-     
-    });
+      
   });
-
-
-
 // global variables
 
 // onclick event for search
