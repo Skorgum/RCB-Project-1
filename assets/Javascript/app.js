@@ -15,7 +15,7 @@ firebase.initializeApp(firebaseConfig);
 var dataRef = firebase.database();
 var name = "";
 var email = "";
-$("#btn btn-primary").on("click", function (event) {
+$("#signUp").on("click", function (event) {
   event.preventDefault();
 
   name = $("#inputName").val().trim();
@@ -29,6 +29,7 @@ $("#btn btn-primary").on("click", function (event) {
     email: email,
 
   });
+});
   // global variables
 
   // onclick event for search
