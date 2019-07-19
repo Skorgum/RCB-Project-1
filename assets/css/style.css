@@ -24,6 +24,7 @@ body{
 }
 
 #sign-up{
+    float:right;
     border-right: 1px #0c74e2 solid;
     padding-right: .5%;
     margin-bottom: 20px;
