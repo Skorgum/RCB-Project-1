@@ -15,13 +15,101 @@
         <!-- main navigation starts-->
         <div id="main-nav" class="row">
             <nav class="col-sm-12">
-                <!-- sign in & sign up feature-->
+                <!-- sign in & sign up -->
                 <div id="sign-up-in" class="row">
                     <div class="col-sm-12">
-                        <a href="#" id="sign-up">Sign Up</a> 
-                        <a href="#" id="sign-in">Sign in</a>
+                        <!-- Sign Up -->
+                        <button type="button" id="sign-up" data-toggle="modal" data-target="#signUpModal">Sign Up</button> 
+                        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalCenterTitle">Sign Up</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Form -->
+                                    <form>
+                                        <div class="form-row">
+                                          <div class="form-group col-md-6">
+                                            <label for="inputEmail4">Email</label>
+                                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                          </div>
+                                          <div class="form-group col-md-6">
+                                            <label for="inputPassword4">Password</label>
+                                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                          </div>
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="inputAddress">Address</label>
+                                          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="inputAddress2">Address 2</label>
+                                          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                        </div>
+                                        <div class="form-row">
+                                          <div class="form-group col-md-6">
+                                            <label for="inputCity">City</label>
+                                            <input type="text" class="form-control" id="inputCity">
+                                          </div>
+                                          <div class="form-group col-md-4">
+                                            <label for="inputState">State</label>
+                                            <select id="inputState" class="form-control">
+                                              <option selected>Choose...</option>
+                                              <option>...</option>
+                                            </select>
+                                          </div>
+                                          <div class="form-group col-md-2">
+                                            <label for="inputZip">Zip</label>
+                                            <input type="text" class="form-control" id="inputZip">
+                                          </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Sign in</button>
+                                      </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <!-- Sign In-->
+                        <button type="button" id="sign-in" data-toggle="modal" data-target="#signInModal">Sign in</button>
+                            <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Form -->
+                                            <form>
+                                                <div class="form-group row">
+                                                    <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
+                                                      <div class="col-sm-10">
+                                                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                                      </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="inputPassword3" class="col-sm-2 col-form-label"></label>
+                                                    <div class="col-sm-10">
+                                                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                                    </div>
+                                                </div>
+                                                    <div class="col-sm-10">
+                                                        <button type="submit" class="btn btn-primary">Sign in</button>
+                                                    </div>
+                                            </form>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
                     </div>
                 </div>
+                
                 <!-- Brand -->
                 <a id="brand" href="./index.html">eventful</a>
                 <!--<h1 id="brand">eventful</h1>-->
@@ -30,20 +118,27 @@
                     <div class="form-row">
                         <div class="col-md-5 col-sm-12">
                             <!-- location parameter -->
-                            <input type="textarea" id="location" class="form-control" name="location" value="" placeholder="Location">
+                            <input type="textarea" id="location" class="form-control" name="location" value=""  placeholder="Location">
                         </div>  
                         <div class="col-md-5 col-sm-12">
                             <!-- event title parameter-->
-                            <input type="textarea" id="event"    class="form-control" name="event"  value=""   placeholder="Event Title or Keyword">
+                            <input type="textarea" id="event"    class="form-control" name="event"    value=""  placeholder="Event Title or Keyword">
                         </div>
                         <div class="col-md-1 col-sm-12">
                             <!-- submit button -->
-                            <input type="submit" id="search" class="btn btn-primary" value="search">  
+                            <input type="submit" id="search"     class="btn btn-primary" value="search">  
                         </div> 
                     </div>     
                 </form>                   
             </nav> 
             <!-- end of main navigation -->   
+        </div>
+        <!-- header ends-->
+
+        <div id ="sub-nav" class="row">
+            <nav id="buttons-container" class="col-sm-12">
+
+            </nav>
         </div>
     </header>
     
@@ -65,6 +160,7 @@
     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
     <!-- Firebase Database -->
     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+    <script src="./assets/Javascript/signup.js"></script>
     <script src="./assets/Javascript/app.js"></script>
 </body>
 </html>
