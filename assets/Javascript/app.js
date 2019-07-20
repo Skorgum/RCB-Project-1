@@ -2,6 +2,7 @@ console.log("(⌐■_■)");
 
 // Firebase configuration
 var firebaseConfig = {
+
     apiKey: "AIzaSyCCJzvIcPUPTcn5jsc1T727-OWc3AittmM",
     authDomain: "event-meta-search.firebaseapp.com",
     databaseURL: "https://event-meta-search.firebaseio.com",
@@ -77,7 +78,8 @@ function search(e){
   var event = $('#event').val();
   var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=" + event + "&apikey=jMH0oHQBw8sCR7SRnBKCRRoG6gn2I5S8";
 
-    $.ajax({
+
+
         url: 'https://cors-anywhere.herokuapp.com/' + queryURL,
         headers: { 'X-Requested-With': 'XMLHttpRequest' },
         method: "GET",
@@ -99,6 +101,7 @@ function search(e){
 
           var eventsDiv = $('<div class="events">');
           var eventDiv = 
+
           $(`<div class="row event-row">
               <div class="col-md-2">
                 <img src="${imgURL}" width="200" height="200">
@@ -113,13 +116,15 @@ function search(e){
                       <a href="${ticketURL}" id="tickets" class="btn" target="_blank">Find Tickets</a>
                     </div>    
                 </div>
+
               </div>
             </div>`)
 
           $('#events').append(eventDiv);
         }          
+
     })
-};
+  };
 
 
 // when the user clicks a saved button an event is searched
