@@ -1,7 +1,16 @@
 body{
-   background-image: url("../images/wallpaper.jpg");
-   
+    background:#e8e8e8;
 }
+header.container-fluid{
+    padding:0;
+    position: fixed;
+    z-index: 100;
+
+}
+/* header{
+    position: fixed;
+    z-index: 100;
+} */
 #brand:hover{
     color:#ed7133;
     text-decoration: none;
@@ -14,11 +23,13 @@ body{
     position: relative;
 }
 
-#sign-up-in a{
+#sign-up-in button{
+    background: #0866cc;
+    color: white;
+    border: none;
     text-align: right;
     position: relative;
     left: 29%;
-    color: white;
     font-size: .8em;
     padding-bottom: 10px;
 }
@@ -29,6 +40,7 @@ body{
     padding-right: .5%;
     margin-bottom: 20px;
 }
+
 
 #brand{
     color: white;
@@ -51,12 +63,25 @@ input#location, input#event{
     width: 20rem;
 }
 
-#demo-api{
-    text-align: left;
+#sub-nav{
+    background: #0657b0;
+    margin-bottom: 1%;
+    padding:.5%;
 }
+
 
 h2{
     text-align: center;
+}
+
+#Music {
+    margin: 0 0 0 16%;
+}
+
+.saved-search{
+    background: #0657b0;
+    border: none;
+    color: white;
 }
 
 #sides{
@@ -81,7 +106,7 @@ h2{
 }
 
 .card{
-    border: none;
+    /* border: none; */
 }
 
 .card-body{
@@ -89,7 +114,7 @@ h2{
 }
 
 .event-row{
-    margin-bottom: 2%;
+    padding: 2% 0;
     border-bottom: dotted 1px grey;
 }
 
@@ -100,6 +125,20 @@ div.col-md-3, div.col-md-9{
 #tickets{
     background: #ed7133;
     color: white;
-    font-size: .8rem;
+    font-size: 1rem;
 }
 
+div.row.event-row{
+    margin-bottom: 2%;
+    background: white;
+}
+
+#demo-api{
+    background: #e8e8e8;
+    padding-top: 18%;
+}
+
+.card{
+    margin-left: 5%;
+    border: none;
+}
